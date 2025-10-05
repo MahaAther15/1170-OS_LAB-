@@ -1,0 +1,1 @@
+Inserted teaxt in notes.txt using commands of linux for practice
