@@ -24,7 +24,6 @@ void* thread_function(void* arg) {
     printf("Thread %d sleeping for %d second(s)...\n", thread_num, sleep_time);
     sleep(sleep_time); // Simulate work
     printf("✅ Thread %d completed after %d second(s).\n\n", thread_num, sleep_time);
-
     pthread_exit(NULL);
 }
 int main() {
