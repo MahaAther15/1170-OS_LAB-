@@ -68,12 +68,11 @@ int main(){
     }
     printf("\nTotal sum of the array is:%d\n",total_sum);
     return 0;
-}
-
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
 // remarks
 // create four threads to calculate the sum of different parts of the array.
-// create data structure to pass arguments to threads.(start,count)
+// crete data structure to pass arguments to threads.(start,count)
 // create a function to allocate different size of array 
 // allocate different size of array to each thread 
 // use malloc() to allocate memory space for each thread's sum value
