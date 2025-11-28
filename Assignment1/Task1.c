@@ -4,7 +4,7 @@
  Registration : 23-NTU-CS-1170
  Task Title  : Task 1 – Thread Information Display
  Description : This program creates 5 threads. Each thread prints:
-               • Its thread ID using pthread_self()
+               • Its thread ID usinga pthread_self()
                • Its thread number (1st, 2nd, etc.)
                • Sleeps for a random time (1–3 seconds)
                • Prints a completion message before exiting

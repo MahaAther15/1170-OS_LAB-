@@ -9,12 +9,10 @@
                The main thread counts how many students made the Dean’s List.
  ============================================================================
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #include <string.h>
-
 // Define Student structure
 typedef struct {
     int student_id;
@@ -37,14 +35,14 @@ void* check_deans_list(void* arg) {
     printf("GPA: %.2f\n", s->gpa);
 
     if (s->gpa >= 3.5) {
-        printf("✅ %s made the Dean’s List!\n", s->name);
+        printf("✅ %s made the Dean's List!\n", s->name);
 
         // Lock before updating shared variable
         pthread_mutex_lock(&lock);
         deans_list_count++;
         pthread_mutex_unlock(&lock);
     } else {
-        printf("❌ %s did not make the Dean’s List.\n", s->name);
+        printf("❌ %s did not make the Dean's List.\n", s->name);
     }
 
     pthread_exit(NULL);
@@ -85,11 +83,11 @@ int main() {
 
     // Display final count
     printf("\n---------------------------------\n");
-    printf("Total students on Dean’s List: %d\n", deans_list_count);
+    printf("Total students on Dean's List: %d\n", deans_list_count);
     printf("Main thread: Task completed.\n");
 
     // Destroy mutex
     pthread_mutex_destroy(&lock);
-
+    
     return 0;
 }
