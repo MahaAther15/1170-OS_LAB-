@@ -6,7 +6,7 @@
 
 sem_t computers;
 pthread_mutex_t lock;
-int compUse[5];   // K = 5 computers
+int compUse[5];   // K = 5 computers 
 
 void* student(void* arg) {
     int id = *(int*)arg;
